@@ -53,7 +53,7 @@
   nav ul li a {
     text-decoration: none;
     font-size: 1em;
-    color: black;
+    color: #191919;
     transition: color 0.3s;
   }
 
@@ -89,3 +89,45 @@
     gap: 20px;
     container: listing-container; 
   }
+
+  .profile-container {
+    position: absolute;
+    display: inline-block;
+    margin-left: 800px; 
+}
+
+.profile-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+
+.dropdown {
+    display: none;
+    position: absolute;
+    right: 0;
+    background: #333333;
+    border-radius: 10px;
+    width: 250px;
+    padding: 10px;
+}
+
+.dropdown button {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    text-align: left;
+    color: rgb(252, 252, 252);
+}
+
+.dropdown button:hover {
+    background: #474747;
+    color :  rgb(252, 252, 252 ); 
+    border-radius: 5px;
+}
+
+

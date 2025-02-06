@@ -5,12 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mokesell New & Featured</title>
     <link rel="stylesheet" href="index.css">
-    
+    <script src="script.js"></script>
 </head>
 <body>
     <header>
         <div class="navbar">
-            <div class="logo"><img src="pngs/Mokesell.png" alt="mainlogo"></div>
+            <div class="logo">
+                <img src="pngs/Mokesell.png" alt="mainlogo">
+            </div>
             <nav>
                 <ul>
                     <a class="newf" href="index.html">New & Featured</a>
@@ -20,6 +22,14 @@
                     <a class="newf" href="Sale.html">Sale</a>
                 </ul>
             </nav>
+
+            <div class="profile-container">
+                <img src="pngs/profile.jpg" alt="Profile" class="profile-icon" onclick="toggleDropdown()">
+                <div class="dropdown" id="dropdownMenu">
+                    <button>Settings</button>
+                    <button onclick="logoutUser()">Logout</button>
+                </div>
+            </div>
         </div>  
     </header>
 
