@@ -122,22 +122,32 @@ body {
     color: #000;
     border: none;
     border-radius: 20px;
-    padding: 10px;
-    padding-right: 20px;
-    padding-left:20px;
+    padding: 10px 20px;
     cursor: pointer;
     font-size: 16px;
     font-weight: bold;
     margin-left: 650px;
-  
-    
+    bottom: 32.5px;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
   }
+  
+  /* Hover animation */
+  #sellbutton:hover {
+    background-color: gold; 
+    transform: scale(1.03)
+  }
+  
+  /* Click effect */
+  #sellbutton:active {
+    transform: scale(0.95); 
+  }
+  
   
   .profile-container {
     position: absolute;
     display: inline-block;
     margin-left: 800px; 
-    margin-top: 23px;
+  
   }
   
   .profile-icon {
@@ -146,6 +156,12 @@ body {
   border-radius: 50%;
   cursor: pointer;
   }
+  
+  .profile-icon:hover {
+    transform: rotate(10deg) scale(1.03); 
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8); 
+  }
+  
   
   
   .dropdown {
