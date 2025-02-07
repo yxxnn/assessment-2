@@ -11,7 +11,7 @@ body {
 
   .logo {
     position: absolute;
-    top: 20px;
+    top: 10px;
     left: 20px;
   }
 
@@ -37,33 +37,165 @@ body {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: 35px 37%;
+    padding: 25px 37%;
     z-index: 1000;
     background-color: #121212;
     box-shadow: 0 2px 4px rgba(255, 255, 255, 0.2);
-  }
-
-
-  nav ul {
-    display: flex;
-    gap: 15px;
-    list-style: none;
-  }
-
-  nav ul li a {
-    text-decoration: none;
-    font-size: 1em;
-    color: #191919;
-    transition: color 0.3s;
   }
 
   .newf:hover{
     color: rgb(255, 255, 0);
   }
 
-  .line1{
-    width: 1600px;
-    border-color: #555;
-    margin-bottom: 10px;
-    margin-bottom: 460px;
+  .profile-container {
+    position: absolute;
+    display: inline-block;
+    margin-left: 800px; 
   }
+  
+  .profile-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  }
+  
+  
+  .dropdown {
+    display: none;
+    position: absolute;
+    right: 0;
+    background: #333333;
+    border-radius: 10px;
+    width: 250px;
+    padding: 10px;
+  }
+  
+  .dropdown button {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    text-align: left;
+    color: rgb(252, 252, 252);
+  }
+  
+  .dropdown button:hover {
+    background: #474747;
+    color :  rgb(252, 252, 252 ); 
+    border-radius: 5px;
+  }
+
+  #listingForm{
+    display: flex;
+    flex-direction: column;
+  
+    gap: 25px;
+    padding-top: 350px;
+  }
+
+
+#productImage {
+  display: none;
+}
+
+.custom-file-label {
+  display: inline-block;
+  background-color: yellow;
+  color: black;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  width: 50%;
+  transition: background-color 0.3s ease-in-out 0.2s, transform 0.3s ease-in-out 0.2s;
+}
+
+.custom-file-label:hover {
+  background-color: gold;
+}
+
+
+#file-name {
+  margin-top: 5px;
+  font-size: 0.9em;
+  color: white;
+}
+
+#image-container {
+  width: 50%;
+  display: flex;
+  flex-direction: column; /* Stack elements inside */
+  align-items: center;
+  background-color: #262626; /* Keep or change color */
+  padding: 70px;
+  border-radius: 10px;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+label{
+  font-weight: 600;
+  font-size: 20px;
+}
+
+#productName{
+  padding:10px 15px;
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+  border-radius: 5px;
+  width:400px;
+}
+
+#productPrice{
+  padding:10px 15px;
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+  border-radius: 5px;
+  width:400px;
+}
+
+#productDesc{
+  padding:10px 15px;
+  padding-bottom: 60px;
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+  border-radius: 5px;
+  width:400px;  
+}
+
+
+#create-listing{
+  background-color: yellow;
+  color: #000;
+  border: none;
+  border-radius: 20px;
+  margin-top: 30px;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 35px;
+}
+
+#create-listing:hover {
+    background-color: #e6e600;
+    transform: scale(1.05);
+  animation: pulse 1s infinite alternate;
+}
+
+/* Keyframe animation */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 100px rgba(255, 223, 0, 0.6);
+  }
+  100% {
+    box-shadow: 0 0 5px rgba(255, 223, 0, 1);
+  }
+}
+
+
+

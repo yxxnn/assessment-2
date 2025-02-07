@@ -22,3 +22,8 @@ window.onclick = function(event) {
 function logoutUser() {
     window.location.href = "Login.html"; 
 }
+
+document.getElementById("productImage").addEventListener("change", function() {
+    let fileName = this.files[0] ? this.files[0].name : "No file chosen";
+    document.getElementById("file-name").textContent = fileName;
+});

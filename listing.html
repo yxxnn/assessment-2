@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mokesell New & Featured</title>
     <link rel="stylesheet" href="css/dashboard.css">
-
+    <script src="script.js"></script>
 </head>
 <body>
     <header>
@@ -20,23 +20,34 @@
                     <a class="newf" href="Sale.html">Sale</a>
                 </ul>
             </nav>
+            <div class="profile-container">
+                <img src="pngs/profile.jpg" alt="Profile" class="profile-icon" onclick="toggleDropdown()">
+                <div class="dropdown" id="dropdownMenu">
+                    <button>Settings</button>
+                    <button onclick="logoutUser()">Logout</button>
+                </div>
+            </div>
         </div>  
     </header>
     <main>
-        <from id = "listingForm">
-            <label>Product Name:</label>
-            <input type = "text" id = "productName" name ="productName" required>
+        <form id = "listingForm">
+
+            <label>Listing Name :</label>
+            <input type = "text" id = "productName" name ="productName" required placeholder="Enter listing name">
 
             <label>Price ($): </label>
-            <input type = "text" id = "productPrice" name ="productPrice" required min="0">
+            <input type = "text" id = "productPrice" name ="productPrice" required min="0" placeholder="Enter Price">
             
             <label>Description: </label>
-            <textarea id = "productDesc" name="productDesc" rows="3" required></textarea>
+            <textarea id = "productDesc" name="productDesc" rows="3" required placeholder="Enter Description"></textarea>
+            <label>Listing Image </label>
+            <div id = "image-container">
+                <label for="productImage" class="custom-file-label">Upload Image</label>
+                <input type="file" id="productImage" name="productImage" accept="image/*" required>
+                <p id="file-name">No file chosen</p>
+            </div>  
+            <button type="submit" id = "create-listing">Create Listing</button>
 
-            <label>Product Image: </label>
-            <input type="file" id="productImage" name="productImage" accept="image/*" required>
-
-            <button type="submit">Create Listing</button>
         </form>        
     </main>
 </body> 
