@@ -82,17 +82,14 @@ body {
     margin-top: 20px;
   }
   
-  /* Listing container */
   .listing-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* 4 columns */
     gap: 20px; /* Space between items */
     justify-content: center;
-    margin-top: 255px;
+    margin-top: 430px;
   }
   
-  
-  /* Listing card */
   .listing-card {
   background-color: #222;
   border-radius: 10px;
@@ -100,10 +97,9 @@ body {
   width: 250px;
   text-align: center;
   justify-content: center;
-  
   }
   
-  /* Image Styling */
+
   .listing-container img {
   width: 100%;
   border-radius: 10px;
@@ -131,13 +127,12 @@ body {
     transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
   }
   
-  /* Hover animation */
   #sellbutton:hover {
     background-color: gold; 
     transform: scale(1.03)
   }
   
-  /* Click effect */
+
   #sellbutton:active {
     transform: scale(0.95); 
   }
@@ -161,8 +156,6 @@ body {
     transform: rotate(10deg) scale(1.03); 
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.8); 
   }
-  
-  
   
   .dropdown {
     display: none;

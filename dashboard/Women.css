@@ -88,7 +88,7 @@ nav ul li a {
   grid-template-columns: repeat(4, 1fr); /* 4 columns */
   gap: 20px; /* Space between items */
   justify-content: center;
-  margin-top: 255px;
+  margin-top: 430px;
 }
 
 

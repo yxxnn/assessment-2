@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mokesell New & Featured</title>
+    <link rel="stylesheet" href="/css/feeback.css">
+
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo"><img src="/pngs/Mokesell.png" alt="mainlogo"></div>
+            <nav>
+                <ul>
+                    <ul>
+                        <a class="newf" href="/index.html">New & Featured</a>
+                        <a class="newf" href="/dashboard/Men.html">Men</a>
+                        <a class="newf" href="/dashboard/women.html">Women</a>
+                        <a class="newf" href="/dashboard/Kids.html">Kids</a>
+                        <a class="newf" href="/dashboard/Sale.html" >Sale</a>
+                        <a href="listing.html" id = "sellbutton" >Sell</a>
+                    </ul>
+                </ul>
+            </nav>
+            <div class="profile-container">
+                <img src="/pngs/profile.jpg" alt="Profile" class= "profile-icon" onclick="toggleDropdown()">
+                <div class="dropdown" id="dropdownMenu">
+                    <button>Settings</button>
+                    <button onclick="logoutUser()">Logout</button>
+                </div>
+            </div>
+        </div>  
+    </header>
+    <main>
+        <div class="form-container">
+            <h2>Need assistance?</h2>
+    
+            <label for="platform">Platform (Optional)</label>
+            <select id="platform">
+                <option>Desktop website</option>
+                <option>Mobile website</option>
+                <option>Mobile app</option>
+            </select>
+    
+            <label for="email">Your email address</label>
+            <input type="email" id="email" placeholder="Enter email address">
+    
+            <label for="country">Country</label>
+            <select id="country">
+                <option>Singapore</option>
+                <option>United States</option>
+                <option>United Kingdom</option>
+                <option>Australia</option>
+                <option>Other</option>
+            </select>
+    
+            <label for="description">Description</label>
+            <textarea id="description" placeholder="Describe your issue"></textarea>
+    
+            <div class="file-upload">
+                <label for="attachment">Attachment (Optional)</label>
+                <div class="file-input-wrapper">
+                    <input type="file" id="attachment" multiple>
+                </div>
+            </div>
+            <button id="submit-btn">Submit</button>
+        </div>   
+    </main>
+    <script>
+
+        function toggleDropdown() {
+            let dropdown = document.getElementById("dropdownMenu");
+
+            if (dropdown) {
+                dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+            }
+        }
+
+        window.onclick = function(event) {
+            let dropdown = document.getElementById("dropdownMenu");
+            if (!event.target.matches('.profile-icon') && !event.target.closest('#dropdownMenu')) {
+                if (dropdown) {
+                    dropdown.style.display = "none";
+                }
+            }
+        };
+
+  
+        function logoutUser() {
+            window.location.href = "auth/login.html";   
+        }
+    </script>
+</body> 

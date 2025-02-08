@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mokesell New & Featured</title>
+    <link rel="stylesheet" href="Sale.css">
+    
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo"><img src="pngs/Mokesell.png" alt="mainlogo"></div>
+            <nav>   
+                <ul>
+                    <a class="newf" href="/index.html">New & Featured</a>
+                    <a class="newf" href="/dashboard/Men.html">Men</a>
+                    <a class="newf" href="/dashboard/women.html">Women</a>
+                    <a class="newf" href="/dashboard/Kids.html">Kids</a>
+                    <a class="newf" href="/dashboard/Sale.html" >Sale</a>
+                    <a href="listing.html" id = "sellbutton" >Sell</a>
+                </ul>
+            </nav>
+            <div class="profile-container">
+                <img src="/pngs/profile.jpg" alt="Profile" class="profile-icon" onclick="toggleDropdown()">
+                <div class="dropdown" id="dropdownMenu">
+                    <button>Settings</button>
+                    <button onclick="logoutUser()">Logout</button>
+                </div>
+            </div>
+        </div>  
+    </header>
+
+    <main>
+        <h1 class="headername">New & Featured</h1>
+        <div class="listing-container">
+                <!--Kobe grinch Card-->
+                <div class="listing-card">
+                    <a href="#">
+                        <img src="/pngs/kobegrinchdefault.png" class="kobe6" alt="Kobe 6 grinch">
+                    </a>
+                    <P>Kobe 6 "Grinch"</P>
+                </div>
+    
+                <!--Gt cut 3s Card-->
+                <div class="listing-card">
+                    <a href="#">
+                        <img src="/pngs/gtcut3.webp" class="GTCUT" alt="Gt Cut 3">
+                    </a>
+                    <p>Gt Cut 3 "Picante Red"</p>
+                </div>
+    
+                    <!--Kobe 5 xray Card-->
+                    <div class="listing-card">
+                        <a href="#">
+                            <img src="/pngs/kobe5xray.jpg" class="kobe5" alt="Kobe 5 XRAY">
+                        </a>
+                        <p>Kobe 5 "X-RAY"</p>
+                    </div>
+    
+                <!--sabrina 1 Card-->
+                <div class="listing-card">
+                    <a href="#">
+                        <img src="/pngs/sabrina 1s.webp" class="SABRINA" alt="Sabrina 1">
+                    </a>
+                    <p>Sabrina 1 "White Black Silver"</p>         
+                </div>
+                
+                <!--Vomero 5 Card-->
+                <div class="listing-card">
+                    <a href="#">
+                        <img src="/pngs/vomero5pink.jpg" class="VOMERO" alt="Pink Sambas">
+                    </a>
+                    <p>Vomero 5 "Pink Foam"</p>         
+                </div>
+    
+                <!--Ja 1 xray Card-->
+                <div class="listing-card">
+                    <a href="#">
+                        <img src="/pngs/ja 1.webp" class="Ja-1" alt="Ja 1">
+                    </a>
+                    <p>Ja 1 "Scratch 2.0"</p>
+                </div>
+    
+                <!--Kobe 6 allstar Card-->
+                <div class="listing-card">
+                    <a href="#">
+                        <img src="/pngs/kobe6allstar.png" class="kobe6" alt="Kobe 6 all star">
+                    </a>
+                    <p>Kobe 6 protro "Sail"</p>
+                </div>
+    
+                <!--Kobe v Card-->
+                <div class="listing-card">
+                    <a href="#">
+                        <img src="/pngs/kobe v year of mamba.png" class="kobev" alt="Kobe v year of mamba">
+                    </a>
+                    <P>Kobe 5 "Year Of Mamba"</P>
+                </div>
+                
+                <!--Jordan 3 Card-->
+                <div class="listing-card">
+                    <a href="#">
+                        <img src="/pngs/jordan3blackcat.png" class="Jordan3" alt="Jordan 3 blackcat">
+                    </a>
+                    <p>jordan 3 "Black Cat"</p>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <script>
+        // Function to toggle the dropdown visibility
+        function toggleDropdown() {
+            let dropdown = document.getElementById("dropdownMenu");
+
+            // Toggle the display of the dropdown menu
+            if (dropdown) {
+                dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+            }
+        }
+
+        // Close the dropdown if clicked outside of the dropdown or profile icon
+        window.onclick = function(event) {
+            let dropdown = document.getElementById("dropdownMenu");
+
+            // Close dropdown if the click is outside the dropdown or profile icon
+            if (!event.target.matches('.profile-icon') && !event.target.closest('#dropdownMenu')) {
+                if (dropdown) {
+                    dropdown.style.display = "none";
+                }
+            }
+        };
+
+        // Logout function (you can customize this as per your requirement)
+        function logoutUser() {
+            // Redirecting to login page
+            window.location.href = "auth/login.html";  // Modify the URL as necessary
+        }
+    </script>
+</body>
