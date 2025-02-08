@@ -1,0 +1,29 @@
+/* global css here */
+
+
+#snakeGame {
+    width: 220px;
+    height: 220px;
+    position: relative;
+    border: 2px solid #000;
+    background-color: #f0f0f0;
+    display: none;
+}
+.snake {
+    background-color: green;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+}
+.food {
+    background-color: red;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+}
+#score {
+    margin-top: 10px;
+}
+#startButton {
+    margin: 10px 0;
+}

@@ -1,0 +1,175 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #121212;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+nav ul a {
+  text-decoration: none;
+  font-size: 1em;
+  color: rgb(255, 255, 255);
+  transition: color 0.3s;
+}
+
+nav ul {
+  display: flex;
+  gap: 15px;
+  list-style: none;
+}
+
+.navbar {
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 25px 37%;
+  z-index: 1000;
+  background-color: #121212;
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.2);
+}
+
+
+nav ul {
+  display: flex;
+  gap: 15px;
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-size: 1em;
+  color: black;
+  transition: color 0.3s;
+}
+
+.newf:hover{
+  color: rgb(255, 255, 0);
+}
+
+.line1{
+  width: 1600px;
+  border-color: #555;
+  margin-bottom: 10px;
+  margin-bottom: 460px;
+}
+
+.header{
+  text-align: center;
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+
+.headername{ 
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  height: 400px;
+  margin-top: 20px;
+}
+
+/* Listing container */
+.listing-container {
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+gap: 20px;
+margin-top: 500px;
+justify-content: center;
+padding-bottom: 10px;
+}
+
+/* Listing card */
+.listing-card {
+background-color: #222;
+border-radius: 10px;
+padding: 15px;
+width: 250px;
+text-align: center;
+justify-content: center;
+}
+
+/* Image Styling */
+.listing-container img {
+width: 100%;
+border-radius: 10px;
+transition: transform 0.3s ease-in-out;
+justify-content: center;
+;
+}
+
+.listing-container img:hover {
+transform: scale(1.05);
+}
+
+#sellbutton {
+  position: absolute;
+  background-color: yellow;
+  color: #000;
+  border: none;
+  border-radius: 20px;
+  padding: 10px;
+  padding-right: 20px;
+  padding-left:20px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  margin-left: 650px;
+
+  
+}
+
+.profile-container {
+  position: absolute;
+  display: inline-block;
+  margin-left: 800px; 
+  margin-top: 23px;
+}
+
+.profile-icon {
+width: 40px;
+height: 40px;
+border-radius: 50%;
+cursor: pointer;
+}
+
+
+.dropdown {
+  display: none;
+  position: absolute;
+  right: 0;
+  background: #333333;
+  border-radius: 10px;
+  width: 250px;
+  padding: 10px;
+}
+
+.dropdown button {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  text-align: left;
+  color: rgb(252, 252, 252);
+}
+
+.dropdown button:hover {
+  background: #474747;
+  color :  rgb(252, 252, 252 ); 
+  border-radius: 5px;
+}
