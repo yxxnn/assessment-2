@@ -3,14 +3,28 @@
 const gameArea = document.getElementById('snakeGame');
 const food = document.getElementById('food');
 const scoreDisplay = document.getElementById('score');
+const startButton = document.getElementById('startButton');
+const messageDisplay = document.getElementById('message');
 let snake = [{x: 100, y: 100}]; // oops set this to static by accident
 let direction = {x: 20, y: 0};
 let score = 0;
 let gameinterval;
 
+if (localStorage.getItem('snakeOver')) {
+    messageDisplay.innerText = 'You have already played. Come against tomorrow!';
+    startButton.style.display = 'none';
+}
+
 function addFood() {
-    const x = Math.floor(Math.random() * (gameArea.clientHeight / 20)) * 20;
-    const y = Math.floor(Math.random() * (gameArea.clientHeight / 20)) * 20;
+    // easier to play
+    const xMargin = 20;
+    const yMargin = 20;
+
+    const xMax = gameArea.clientWidth - xMargin;
+    const yMax = gameArea.clientHeight - yMargin;
+
+    const x = Math.floor((Math.random() * (xMax - xMargin)) / 20) * 20 + xMargin;
+    const y = Math.floor((Math.random() * (yMax - yMargin)) / 20) * 20 + yMargin;
     food.style.left = `${x}px`;
     food.style.top = `${x}px`;
 }
@@ -30,7 +44,7 @@ function moveSnake() {
     if (colideCheck(head)) {
         clearInterval(gameinterval);
         localStorage.setItem("snakeOver", true);
-        alert("Game Over!! Your SCore: " + score);
+        alert("Game Over!! Your Score: " + score);
         document.location.reload();
     }
 

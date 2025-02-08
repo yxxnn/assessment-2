@@ -1,7 +1,7 @@
 // db.js Module for MokeSell RestDB. 🔥🔥🔥
 
-const RESTDB_API_URL = "https://mokesell-3139.restdb.io/rest";
-const RESTDB_API_KEY = "67921ce352b8e1b73a5efd62";
+const RESTDB_API_URL = "https://yicv011h00837-195e.restdb.io/rest";
+const RESTDB_API_KEY = "6783c1c3565cc7433813f46e";
 
 // main function to handle API requests
 // source: Teacher's Code from a lesson.

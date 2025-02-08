@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 // here we just log in and redirect to index.html
                 console.log(`Logged in as ${dbUsers[i].name}.`)
-                window.location.href = "index.html";
+                window.location.href = `/index.html`;
                 break;
             }
         }
