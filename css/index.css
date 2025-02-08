@@ -11,7 +11,7 @@ body {
 
 .logo {
   position: absolute;
-  top: 10px;
+  top: 20px;
   left: 20px;
 }
 
@@ -84,13 +84,14 @@ nav ul li a {
 
 /* Listing container */
 .listing-container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 columns */
-  gap: 20px; /* Space between items */
-  justify-content: center;
-  margin-top: 255px;
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+gap: 20px;
+margin-top: 500px;
+justify-content: center;
+padding-bottom: 10px;
 }
-
 
 /* Listing card */
 .listing-card {
@@ -100,7 +101,6 @@ padding: 15px;
 width: 250px;
 text-align: center;
 justify-content: center;
-
 }
 
 /* Image Styling */
@@ -122,32 +122,22 @@ transform: scale(1.05);
   color: #000;
   border: none;
   border-radius: 20px;
-  padding: 10px 20px;
+  padding: 10px;
+  padding-right: 20px;
+  padding-left:20px;
   cursor: pointer;
   font-size: 16px;
   font-weight: bold;
   margin-left: 650px;
-  bottom: 32.5px;
-  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
-}
 
-/* Hover animation */
-#sellbutton:hover {
-  background-color: gold; 
-  transform: scale(1.03)
+  
 }
-
-/* Click effect */
-#sellbutton:active {
-  transform: scale(0.95); 
-}
-
 
 .profile-container {
   position: absolute;
   display: inline-block;
   margin-left: 800px; 
-
+  margin-top: 23px;
 }
 
 .profile-icon {
@@ -156,12 +146,6 @@ height: 40px;
 border-radius: 50%;
 cursor: pointer;
 }
-
-.profile-icon:hover {
-  transform: rotate(10deg) scale(1.03); 
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.8); 
-}
-
 
 
 .dropdown {
