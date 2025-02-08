@@ -13,15 +13,15 @@
             <div class="logo"><img src="/pngs/Mokesell.png" alt="mainlogo"></div>
             <nav>
                 <ul>
-                    <a class="newf" href="index.html">New & Featured</a>
-                    <a class="newf" href="Men.html">Men</a>
-                    <a class="newf" href="Women.html">Women</a>
-                    <a class="newf" href="Kids.html">Kids</a>
-                    <a class="newf" href="Sale.html">Sale</a>
+                    <a class="newf" href="/index.html">New & Featured</a>
+                    <a class="newf" href="/Men.html">Men</a>
+                    <a class="newf" href="/Women.html">Women</a>
+                    <a class="newf" href="/Kids.html">Kids</a>
+                    <a class="newf" href="/Sale.html">Sale</a>
                 </ul>
             </nav>
             <div class="profile-container">
-                <img src="pngs/profile.jpg" alt="Profile" class="profile-icon" onclick="toggleDropdown()">
+                <img src="/pngs/profile.jpg" alt="Profile" class= "profile-icon" onclick="toggleDropdown()">
                 <div class="dropdown" id="dropdownMenu">
                     <button>Settings</button>
                     <button onclick="logoutUser()">Logout</button>
@@ -47,4 +47,33 @@
             <button type="submit" id="create-listing">Create Listing</button>
         </form>        
     </main>
+    <script>
+        // Function to toggle the dropdown visibility
+        function toggleDropdown() {
+            let dropdown = document.getElementById("dropdownMenu");
+
+            // Toggle the display of the dropdown menu
+            if (dropdown) {
+                dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+            }
+        }
+
+        // Close the dropdown if clicked outside of the dropdown or profile icon
+        window.onclick = function(event) {
+            let dropdown = document.getElementById("dropdownMenu");
+
+            // Close dropdown if the click is outside the dropdown or profile icon
+            if (!event.target.matches('.profile-icon') && !event.target.closest('#dropdownMenu')) {
+                if (dropdown) {
+                    dropdown.style.display = "none";
+                }
+            }
+        };
+
+        // Logout function (you can customize this as per your requirement)
+        function logoutUser() {
+            // Redirecting to login page
+            window.location.href = "auth/login.html";  // Modify the URL as necessary
+        }
+    </script>
 </body> 

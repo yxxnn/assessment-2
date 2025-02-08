@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mokesell New & Featured</title>
     <link rel="stylesheet" href="Women.css">
-    <script src="script.js"></script>
     
 </head>
 <body>
@@ -19,7 +18,7 @@
                     <a class="newf" href="Women.html">Women</a>
                     <a class="newf" href="Kids.html">Kids</a>
                     <a class="newf" href="Sale.html" >Sale</a>
-                    <a href="listing.html" id = "sellbutton" >Sell</a>
+                    <a href="dashboard/listing.html" id = "sellbutton" >Sell</a>
                 </ul>
             </nav>
             <div class="profile-container">
@@ -112,4 +111,33 @@
     </div>
 
     </main>
+    <script>
+        // Function to toggle the dropdown visibility
+        function toggleDropdown() {
+            let dropdown = document.getElementById("dropdownMenu");
+
+            // Toggle the display of the dropdown menu
+            if (dropdown) {
+                dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+            }
+        }
+
+        // Close the dropdown if clicked outside of the dropdown or profile icon
+        window.onclick = function(event) {
+            let dropdown = document.getElementById("dropdownMenu");
+
+            // Close dropdown if the click is outside the dropdown or profile icon
+            if (!event.target.matches('.profile-icon') && !event.target.closest('#dropdownMenu')) {
+                if (dropdown) {
+                    dropdown.style.display = "none";
+                }
+            }
+        };
+
+        // Logout function (you can customize this as per your requirement)
+        function logoutUser() {
+            // Redirecting to login page
+            window.location.href = "auth/login.html";  // Modify the URL as necessary
+        }
+    </script>
 </body>
