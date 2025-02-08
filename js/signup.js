@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
         } catch (error) {
             console.error("Error Creating User:", error);
             if (error.status === 400) {
-                // show user a issue
+                // show user a issue cuz a user already exists with xxx
             }
             return;
             // do something here befoire the return statement that tells the user that it failed and they should retry later.

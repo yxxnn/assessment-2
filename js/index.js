@@ -1,29 +1,32 @@
-window.addEventListener('scroll', function() {
-    const header = this.document.getElementById("header");
-    if (this.window.scrollY > 50) {
-        header.classList.add("shrink");
-    } else {
-        header.classList.remove("shrink");
-    }
-});
+import { getDocuments } from './db.js';
 
-function toggleDropdown() {
-    let dropdown = document.getElementById("dropdownMenu");
-    dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+function addItem(title, imgSrc, altText) {
+    const listingCard = document.createElement('div');
+    listingCard.className = 'listing-card';
+
+    const anchor = document.createElement('a');
+    anchor.href = '#';
+
+    const img = document.createElement('img');
+    img.src = imgSrc;
+    img.alt = altText;
+    
+    anchor.appendChild(img);
+
+    const paragraph = document.createElement('p');
+    paragraph.textContent = title;
+
+    listingCard.appendChild(anchor);
+    listingCard.appendChild(paragraph);
+
+    const container = document.getElementById('listing-container');
+    container.appendChild(listingCard);
 }
 
-// Close dropdown if clicked outside
-window.onclick = function(event) {
-    if (!event.target.matches('.profile-icon')) {
-        document.getElementById("dropdownMenu").style.display = "none";
-    }
-};
-
-function logoutUser() {
-    window.location.href = "Login.html"; 
-}
-
-document.getElementById("productImage").addEventListener("change", function() {
-    let fileName = this.files[0] ? this.files[0].name : "No file chosen";
-    document.getElementById("file-name").textContent = fileName;
+document.addEventListener("DOMContentLoaded", function () {
+    getDocuments("listings").then((listings) => {
+        listings.forEach((listing) => {
+            addItem(listing.name, listing.images["base64String"], listing.description);
+        });
+    });
 });

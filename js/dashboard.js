@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 productName: document.getElementById("productName").value,
                 productDescription: document.getElementById("productDesc").value,
                 productPrice: document.getElementById("productPrice").value,
-                productPictures: base64String
+                productPictures: {base64String}
             };
 
             await createDocument("listings", jsonData);
