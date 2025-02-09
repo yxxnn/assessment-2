@@ -1,4 +1,3 @@
-
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -8,11 +7,12 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    padding-top: 80px;
   }
   
   .logo {
     position: absolute;
-    top: 10px;
+    top: 20px;
     left: 20px;
   }
   
@@ -38,7 +38,7 @@ body {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: 25px 37%;
+    padding: 35px 37%;
     z-index: 1000;
     background-color: #121212;
     box-shadow: 0 2px 4px rgba(255, 255, 255, 0.2);
@@ -77,83 +77,45 @@ body {
   
   .headername{ 
     text-align: center;
-    font-size: 24px;
+    font-size: 24px;  
     font-weight: bold;
     height: 400px;
-    margin-top: 1000px;
+    margin-top: 20px;
+  }
+
+  /* Content part*/
+  .commonQn{
+    text-wrap: wrap;
+    text-align: left;
+    font-size: 15px;
+    margin-top: 350px;
+    margin-left: 50px;
+    margin-bottom: 100px;
+    font-weight: 200;
+  }
+
+
+  /* Footer part*/     
+.line-footer{
+    width: 1100px;
+}
+
+.footerstuff{
+    text-align: left;
+    font-size: 15px;
+    margin-top: 20px;
+    font-weight: 200;
+}
+
+.mokesellc{
+    text-align: right;
+    font-size: 15px;
+    margin-top: 20px;
+    font-weight: 200;
+}
+
+.footerstuff p a{
     color: #fff;
-  } 
-
-#snakeGame {
-    width: 220px;
-    height: 220px;
-    position: relative;
-    border: 2px solid #000;
-    background-color: #f0f0f0;
-    display: none;
-}
-.snake {
-    background-color: green;
-    position: absolute;
-    width: 20px;
-    height: 20px;
-}
-.food {
-    background-color: red;
-    position: absolute;
-    width: 20px;
-    height: 20px;
-}
-#score {
-    position:absolute;
-    padding-bottom: 100px;
-    margin-top: 10px;
-    font-size: 20px;
-    text-align: center;
-}
-
-#startButton {
-    display: block;
-    margin: 10px auto; 
-    padding:7px;
-    font-size: 13px;
-    cursor: pointer;
-    background-color: yellow;
-    border: none;
-    border-radius: 10px;
-    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
-}
-
-.backBtn{
-  font-size: 13px;
-  color: #000;
-  cursor: pointer;
-  background-color: yellow;
-  width: 50px;
-  height: 20px;
-  border-radius: 10px;
-  text-align: center;
-  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
-  margin-left: 100px;
-  margin-bottom: 10px;
-}
-
-.header{
-  text-align: center;
-  font-size: 40px;
-  position: fixed;
-  margin-bottom: 550px;
-  font-weight: bold;
-}
-
-#startButton:hover {
-  background-color: gold; 
-  transform: scale(1);
-}
-
-
-#startButton:active {
-  transform: scale(0.95); 
 }
 
 #sellbutton {
@@ -171,13 +133,34 @@ body {
   transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
-/* Hover animation */
+
 #sellbutton:hover {
   background-color: gold; 
   transform: scale(1.03)
 }
 
-/* Click effect */
+
 #sellbutton:active {
   transform: scale(0.95); 
 }
+
+.call{
+    align-items: right;
+    justify-content: right;
+}
+
+.call img{
+  align-items: right;
+  width: 5%;
+}
+
+.Chat{
+  align-items: left;
+  justify-content: left;
+}
+
+.Chat img{
+  width: 7%;
+  align-items: left;
+}
+

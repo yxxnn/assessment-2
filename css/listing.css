@@ -7,9 +7,8 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  padding-top: 100px;
 }
-
-
 
 .logo {
   position: absolute;
@@ -94,15 +93,22 @@ cursor: pointer;
   border-radius: 5px;
 }
 
-#listingForm{
+#listingForm {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 25px;
-  padding-top: 650px;
+  padding-top: 625px;
   justify-content: center;
 }
 
+#listingForm input {
+  color: white;
+}
+
+#listingForm textarea {
+  color: white;
+}
 
 #productImage {
 display: none;
@@ -297,6 +303,47 @@ label{
   max-width: 100px;
 }
 
+.dropdown-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  width: 100%;
+}
+
+.dropdown-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.dropdown-item label {
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 5px;
+  color: white;
+}
+
+.dropdown-item select {
+  padding: 10px 15px;
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+  border-radius: 5px;
+  width: 430px;
+  color: white;
+  font-size: 16px;
+  outline: none;
+  transition: border 0.3s ease-in-out;
+}
+
+.dropdown-item select:focus {
+  border-color: yellow;
+}
+
+
+
+
 /* Mobile devices (max-width: 768px) */
 @media (max-width: 768px) {
   body {
@@ -341,28 +388,6 @@ label{
   .footerstuff, .mokesellc {
     text-align: center;
   }
-}
-
-
-.dropdown-container {
-  display: flex;
-  justify-content: space-between;  /* Adjust spacing */
-  width: 400px;  /* Set a fixed width */
-  gap: 20px;  /* Adds spacing between the dropdowns */
-}
-
-.dropdown-item {
-  display: flex;
-  flex-direction: column;
-  flex: 1; /* Makes each dropdown take equal space */
-}
-
-.dropdown-item select {
-  padding: 10px;
-  background-color: #1e1e1e;
-  border: 1px solid #333;
-  border-radius: 5px;
-  width: 100%; /* Ensures full width inside flex container */
 }
 
 

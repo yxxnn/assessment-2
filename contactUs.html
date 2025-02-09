@@ -3,10 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mokesell New & Featured</title>
-    <link rel="stylesheet" href="/css/ProductPG.css">
-    <script type="module" src="/js/productPage.js"></script>
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <title>Contact Page</title>
+    <link rel="stylesheet" href="/css/contactUs.css ">
 </head>
 <body>
     <header>
@@ -23,33 +21,35 @@
                     <a class="newf" href="/index.html?category=women">Women</a>
                     <a class="newf" href="/index.html?category=kids">Kids</a>
                     <a class="newf" href="/index.html?category=sale">Sale</a>
-                    <a id = "sellbutton" href="/dashboard/listing.html" >Sell</a>
+                    <a href="/dashboard/listing.html" id = "sellbutton">Sell</a>
                 </ul>
             </nav>
-        </div>  
-    </header>
-    <main>
-        <div id="loading-animation" style="display: none;">
-            <lottie-player src="/lottie/cart_loading.json" background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay></lottie-player>
-            <h1>Almost there!</h1>
-        </div>
-        <div class="productContainer">
-            <div class="product-gallery">
-                <div class="thumbnail-list">
-                    <img id="thumbnail-image" src="" class="thumbnail">
-                </div>
-                <div class="main-image">
-                    <img id="main-image" src="" alt="Loading...">
-                </div>
-            </div> 
-            
-            <div class="product-info">
-                <h2>Loading Item...</h2>
-                <p class="price">Loading...</p>
-                <p class="condition">Loading...</p>
-                <p class="description">Loading...</p>
-                <button id="add-to-cart" class="cart-btn">Add to cart</button>
+        </div> 
+        <div class="cmnContent">
+            <div class="commonQn">
+                <h1>Common Questions</h1>
+                <hr>
+                <p>Q: What if a buyer does not ship after we pay for our shoes?</p>
+                <p>Ans:  If the seller doesn't ship within a specified time (e.g., 2-3 days), the order is then canceled, and your money is refunded.</p>
+                <br>
+                <p>Q: How do i write a feedback or contact support?</p>
+                <p>Ans: To contact us you can call +65 91234567 for feedback scroll to the bottom of the page on the left side click feedback.</p>
             </div>
+            <div class="contactUs">
+                <h1>Contact Us</h1>
+                <hr>
+                <div class="Chat">
+                <img src="/pngs/whiteMailLogo.png">
+                <p>Chat with us</p>
+                <p>6:00am - 7:30pm</p>
+                </div>
+                <div class="call">
+                    <img src="/pngs/phone-call-white-icon.png">
+                    <p>Call us</p>
+                    <p>+65 9123 4567</p>
+                </div>
+            </div>
+
         </div>
         <div class="footer">
             <hr class="line-footer">
@@ -60,7 +60,6 @@
             </div>
             <p class="mokesellc">© 2025 Mokesell, Inc. All rights reserved</p>
         </div>
-    </main>
-
+    </header>
 </body>
 </html>

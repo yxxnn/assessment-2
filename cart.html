@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - Mokesell</title>
+    <link rel="stylesheet" href="css/cart.css">
+    <script defer src="/js/cart.js"></script>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo"><img src="/pngs/Mokesell.png" alt="mainlogo"></div>
+            <nav>
+                <ul>
+                    <a class="newf" href="/index.html">New & Featured</a>
+                    <a class="newf" href="/index.html?category=men">Men</a>
+                    <a class="newf" href="/index.html?category=women">Women</a>
+                    <a class="newf" href="/index.html?category=kids">Kids</a>
+                    <a class="newf" href="/index.html?category=sale">Sale</a>
+                    <a href="/dashboard/listing.html" id="sellbutton">Sell</a>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <div id="cart-container">
+            <h1>Your Cart</h1>
+            <div id="cart-items">
+                <!-- <div class="cart-item-card">
+                    <a href="/viewer/ProductPG.html" class="product-card">
+                        <img src="/pngs/NikeKillshot.jpg" alt="Nike Killshot">
+                        <div class="product-info">
+                            <p>test item 123</p>
+                            <p>Price: $999</p>
+                        </div>
+                    </a>
+                </div> -->
+                <!-- Added in javascript. -->
+            </div>
+            <div id="cart-summary">
+                <h2>Order Summary</h2>
+                <p>Total: <span id="cart-total">$0.00</span></p>
+                <a href="/checkout.html"><button id="checkout-button">Proceed to Checkout</button></a>
+            </div>
+        </div>
+        <div class="footer">
+            <hr class="line-footer">
+            <div class="footerstuff">
+                <p><a href="/aboutUs.html">About us</a></p>
+                <p><a href="/dashboard/feedback.html">Feedback</a></p>
+                <p><a href="/contactUs.html">Contact us</a></p>
+            </div>
+            <p class="mokesellc"> © 2025 Mokesell, Inc. All rights reserved</p>
+        </div>
+    </main>
+</body>
+</html>

@@ -4,30 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mokesell New & Featured</title>
-    <link rel="stylesheet" href="/css/dashboard.css">
-    <script type="module" src="/js/dashboard.js"></script>
+    <link rel="stylesheet" href="/css/listing.css">
+    <script type="module" src="/js/listing.js"></script>
+    <script src="/js/global.js"></script>
 </head>
 <body>
     <header>
         <div class="navbar">
-            <div class="logo"><img src="/pngs/Mokesell.png" alt="mainlogo"></div>
+            <div class="logo">
+                <a href="/index.html">
+                    <img src="/pngs/Mokesell.png" alt="mainlogo">
+                </a>
+            </div>
             <nav>
                 <ul>
-                    <a class="newf" href="/index.html">New & Featured</a>
-                    <a class="newf" href="/Men.html">Men</a>
-                    <a class="newf" href="/Women.html">Women</a>
-                    <a class="newf" href="/Kids.html">Kids</a>
-                    <a class="newf" href="/Sale.html">Sale</a>
+                    <li><a class="newf" href="/index.html">New & Featured</a></li>
+                    <a class="newf" href="/index.html?category=men">Men</a>
+                    <a class="newf" href="/index.html?category=women">Women</a>
+                    <a class="newf" href="/index.html?category=kids">Kids</a>
+                    <a class="newf" href="/index.html?category=sale">Sale</a>
                 </ul>
             </nav>
             <div class="profile-container">
-                <img src="/pngs/profile.jpg" alt="Profile" class= "profile-icon" onclick="toggleDropdown()">
+                <img src="https://cdn.chimmy.xyz/portfolio/img/profile.gif" alt="Profile" class= "profile-icon" onclick="toggleDropdown()">
                 <div class="dropdown" id="dropdownMenu">
-                    <button>Settings</button>
                     <button onclick="logoutUser()">Logout</button>
                 </div>
             </div>
-        </div>  
+        </div>
     </header>
     <main>
         <form id="listingForm">
@@ -37,6 +41,31 @@
             <input type="text" id="productPrice" name="productPrice" required min="0" placeholder="Enter Price">
             <label>Description: </label>
             <textarea id="productDesc" name="productDesc" rows="3" required placeholder="Enter Description"></textarea>
+            
+            <div class="dropdown-container">
+                <div class="dropdown-item">
+                    <label>Category:</label>
+                    <select id="productCategory" name="productCategory" required>
+                        <option value="">Select Category</option>
+                        <option value="men">Men</option>
+                        <option value="women">Women</option>
+                        <option value="kids">Kids</option>
+                        <option value="sale">Sale</option>
+                    </select>
+                </div>
+            
+                <div class="dropdown-item">
+                    <label>Condition:</label>
+                    <select id="productCondition" name="productCondition" required>
+                        <option value="">Select Condition</option>
+                        <option value="new">NEW</option>
+                        <option value="barelyused">Barely Used</option>
+                        <option value="moderatelyused">Moderately Used</option>
+                        <option value="heavilyused">Heavily Used</option>
+                    </select>
+                </div>
+            </div>
+            
             <label>Listing Image</label>
             <div id="image-container">
                 <label for="productImage" class="custom-file-label">Upload Image</label>
@@ -45,35 +74,18 @@
                 <img id="preview-image" src="" alt="Image Preview" style="display: none; max-width: 100%; height: auto; margin-top: 10px;" />
             </div>  
             <button type="submit" id="create-listing">Create Listing</button>
-        </form>        
+        </form>
+        <footer>
+            <div class="footer">
+                <hr class="line-footer">
+                <div class="footerstuff">
+                    <p><a href="/aboutUs.html">About us</a></p>
+                    <p><a href="/dashboard/feedback.html">Feedback</a></p>
+                    <p><a href="/contactUs.html">Contact us</a></p>
+                </div>
+                <p class="mokesellc">© 2025 Mokesell, Inc. All rights reserved</p>
+            </div>
+        </footer>        
     </main>
-    <script>
-        // Function to toggle the dropdown visibility
-        function toggleDropdown() {
-            let dropdown = document.getElementById("dropdownMenu");
-
-            // Toggle the display of the dropdown menu
-            if (dropdown) {
-                dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
-            }
-        }
-
-        // Close the dropdown if clicked outside of the dropdown or profile icon
-        window.onclick = function(event) {
-            let dropdown = document.getElementById("dropdownMenu");
-
-            // Close dropdown if the click is outside the dropdown or profile icon
-            if (!event.target.matches('.profile-icon') && !event.target.closest('#dropdownMenu')) {
-                if (dropdown) {
-                    dropdown.style.display = "none";
-                }
-            }
-        };
-
-        // Logout function (you can customize this as per your requirement)
-        function logoutUser() {
-            // Redirecting to login page
-            window.location.href = "auth/login.html";  // Modify the URL as necessary
-        }
-    </script>
-</body> 
+    </body> 
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mokesell New & Featured</title>
+    <link rel="stylesheet" href="/css/feedback.css">
+    <script src="/js/global.js"></script>
+
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <a href="/index.html">
+                    <img src="/pngs/Mokesell.png" alt="mainlogo">
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <ul>
+                        <a class="newf" href="/index.html">New & Featured</a>
+                        <a class="newf" href="/index.html?category=men">Men</a>
+                        <a class="newf" href="/index.html?category=women">Women</a>
+                        <a class="newf" href="/index.html?category=kids">Kids</a>
+                        <a class="newf" href="/index.html?category=sale">Sale</a>
+                        <a href="/dashboard/listing.html" id="sellbutton" >Sell</a>
+                    </ul>
+                </ul>
+            </nav>
+            <div class="profile-container">
+                <img src="https://cdn.chimmy.xyz/portfolio/img/profile.gif" alt="Profile" class= "profile-icon" onclick="toggleDropdown()">
+                <div class="dropdown" id="dropdownMenu">
+                    <button onclick="logoutUser()">Logout</button>
+                </div>
+            </div>
+        </div>  
+    </header>
+    <main>
+        <div class="form-container">
+            <h2>Need assistance?</h2>
+    
+            <label for="platform">Platform (Optional)</label>
+            <select id="platform">
+                <option>Desktop website</option>
+                <option>Mobile website</option>
+                <option>Mobile app</option>
+            </select>
+    
+            <label for="email">Your email address</label>
+            <input type="email" id="email" placeholder="Enter email address">
+    
+            <label for="country">Country</label>
+            <select id="country">
+                <option>Singapore</option>
+                <option>United States</option>
+                <option>United Kingdom</option>
+                <option>Australia</option>
+                <option>Other</option>
+            </select>
+    
+            <label for="description">Description</label>
+            <textarea id="description" placeholder="Describe your issue"></textarea>
+    
+            <div class="file-upload">
+                <label for="attachment">Attachment (Optional)</label>
+                <div class="file-input-wrapper">
+                    <input type="file" id="attachment" multiple>
+                </div>
+            </div>
+            <button id="submit-btn">Submit</button>
+        </div>
+        <div class="footer">
+            <hr class="line-footer">
+            <div class="footerstuff">
+                <p><a href="/aboutUs.html">About us</a></p>
+                <p><a href="/dashboard/feedback.html">Feedback</a></p>
+                <p><a href="/contactUs.html">Contact us</a></p>
+            </div>
+            <p class="mokesellc">© 2025 Mokesell, Inc. All rights reserved</p>
+        </div> 
+    </main>
+</body> 

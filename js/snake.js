@@ -10,13 +10,13 @@ let direction = {x: 20, y: 0};
 let score = 0;
 let gameinterval;
 
-/*
+
 if (localStorage.getItem('snakeOver')) {
-    messageDisplay.innerText = 'You have already played. Come against tomorrow!';
+    messageDisplay.innerText = 'You have already played. Come again tomorrow!';
     startButton.style.display = 'none';
-    scoreDisplay.style.display = 'none';
+    // scoreDisplay.style.display = 'none';
 }
-*/
+
 function addFood() {
     // easier to play
     const xMargin = 20;
@@ -45,7 +45,8 @@ function moveSnake() {
 
     if (colideCheck(head)) {
         clearInterval(gameinterval);
-        localStorage.setItem("snakeOver", true);
+        localStorage.setItem("snakeScore", score);
+        localStorage.setItem("snakeOver", true)
         alert("Game Over!! Your Score: " + score);
         document.location.reload();
     }
@@ -84,6 +85,9 @@ function startGame() {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
+    const snakeScore = localStorage.getItem("snakeScore") || 0;
+    scoreDisplay.innerText = `Score: ${snakeScore}`;
+
     startButton.addEventListener('click', startGame);
     document.addEventListener('keydown', (event) => {
         switch (event.key) {
