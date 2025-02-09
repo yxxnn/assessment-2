@@ -10,11 +10,13 @@ let direction = {x: 20, y: 0};
 let score = 0;
 let gameinterval;
 
+/*
 if (localStorage.getItem('snakeOver')) {
     messageDisplay.innerText = 'You have already played. Come against tomorrow!';
     startButton.style.display = 'none';
+    scoreDisplay.style.display = 'none';
 }
-
+*/
 function addFood() {
     // easier to play
     const xMargin = 20;
